@@ -1,0 +1,14 @@
+include ../../vendor/bemto/bemto-settings
+
+include ../page/page
+include ../scripts/scripts
+
+block variables
+	- var bodyClass = '';
+
+doctype html
+html(lang='ru')
+	include ../head/head
+	+page(class=bodyClass)
+		block content
+		+scripts(['app.min.js'])
